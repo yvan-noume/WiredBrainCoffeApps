@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFTutorial.FifthMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="FifthMainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="txtEntries" Height="35" FontSize="16"/>
+        <Button Grid.Column="1" Name="btnAdd" Width="50" Content="Add" HorizontalAlignment="Left"
+                Click="btnAdd_Click"/>
+        <Button Grid.Column="1" Name="btnDelete" Width="50" Content="Delete" HorizontalAlignment="Left"
+                Click="btnDelete_Click" Margin="60 0 0 0"/>
+        <Button Grid.Column="1" Name="btnClear" Width="50" Content="Clear" HorizontalAlignment="Left"
+                Click="btnClear_Click" Margin="120 0 0 0"/>
+        <ListView Name="lvEntries" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Entries}"/>
+    </Grid>
+</Window>
